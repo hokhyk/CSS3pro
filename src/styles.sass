@@ -45,16 +45,16 @@
     &:nth-child(2n)
         background: purple
 
-.main-navigation
-    ul
-        +clear-fix /* This will prevent problems of cleared float */
-        list-style: none
+// .main-navigation
+//     ul
+//         +clear-fix /* This will prevent problems of cleared float */
+//         list-style: none
 
-    li
-        float: left
-        width: (100%/4)
-        &:hover 
-            background-color:  red
+//     li
+//         float: left
+//         width: (100%/4)
+//         &:hover 
+//             background-color:  red
 
 .equalizer
     display: table
@@ -318,3 +318,60 @@ tbody
 ::selection
     background: red
     color: white
+
+
+
+//Media queries
+@mixin mq($display, $breakpoint)
+    @media #{$display} and #{$breakpoint}
+        @content
+
+$mq_small_only: "(max-width: 640px)"
+$mq_medium_only: "(min-width: 641px) and (max-width: 1024px)"
+$mq_small_and_medium: "(max-width: 1024px)"
+
+body
+    padding: 0
+    margin: 0
+
+.main-navigation
+    ul
+        +clear-fix /* This will prevent problems of cleared float */
+        list-style: none
+        padding: 0
+        background: greenyellow
+        border:
+        bottom: 1px solid darkgreen
+    li
+        float: left
+        display: block
+    a
+        padding: 10px
+        width: 100%
+        display: block
+        background: greenyellow
+        text-decoration: none
+        color: darkgreen
+        &:hover
+            background: darkgreen
+            color: greenyellow
+
++mq("screen", $mq_small_and_medium)
+   .main-navigation
+        ul
+            list-style: none
+            border: none    
+        li
+            float: none
+            width: 100%
+        a
+            border:
+            bottom: 1px solid darkgreen
+
+.container
+    width: 1000px
+    height: 500px
+    border: 3px solid red
+    background:
+        image: url(./assets/images/circle.png)
+        repeat: no-repeat
