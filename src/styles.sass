@@ -1,11 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
-.element 
-    background: pink
-    padding: 10px
-    margin: 0px
-    width: 100px
-    height: 100px
-    border: solid 10px red
+// .element 
+//     background: pink
+//     padding: 10px
+//     margin: 0px
+//     width: 100px
+//     height: 100px
+//     border: solid 10px red
 
 * 
     box-sizing: border-box
@@ -373,5 +373,49 @@ body
     height: 500px
     border: 3px solid red
     background:
-        image: url(./assets/images/circle.png)
+        image: url(./assets/images/circle.png), url(./assets/images/circle.png), url(./assets/images/circle.png), url(./assets/images/circle.png), url(./assets/images/circle.png), url(./assets/images/circle.png), url(./assets/images/circle.png), url(./assets/images/circle.png), url(data:image/jpeg;base64, )
+        repeat: no-repeat  //repeat, no-repeat, repeat-x, repeat-y
+        size: 100px 100px  //contain, cover, auto 100%,  100% auto, 30px 50px,
+        position: left top, center top, right top, left center, center center, right center, bottom left, bottom center, bottom right //center, top, botom, left, right, 600px 200px,
+        size: 50px auto, auto auto, auto auto, auto auto, 200px auto, auto auto,auto auto, auto auto, 50px auto
+
+@import '~compass-mixins/lib/compass/css3'
+// @import url(./assets/images/newsprite/*.png)
+// @include all-newsprite-sprites(true)
+
+@import '~compass-mixins/lib/compass/utilities/sprites'
+
+//  $circles: sprite-map("./assets/images/newsprite/*.png", $spacing: 2px, $layout: diagonal)
+// .element-circle-blue
+//     background-image: sprite-url($circles)
+//     background-position: sprite-position($circles, circle-blue)
+//     @include sprite-dimensions($circles, circle-blue)
+// .element-circle-red
+//     background-image: sprite-url($circles)
+//     background-position: sprite-position($circles, circle-red)
+//     @include sprite-dimensions($circles, circle-red)
+// .element-circle-white
+//     background-image: sprite-url($circles)
+//     background-position: sprite-position($circles, circle-white)
+//     @include sprite-dimensions($circles, circle-white)
+// .element-circle-blue,
+// .element-circle-red,
+// .element-circle-white
+//     float: left
+
+// retina display
+.element
+    background:
+        image: url(assets/images/nina-dobrev.png)
         repeat: no-repeat
+        size: cover
+    width: 1000px
+    height: 500px
+    border: 3px solid red
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
+    .element
+        background:
+        image: url(assets/images/nina-dobrev.png)
+        repeat: no-repeat
+        size: 50% 50%
