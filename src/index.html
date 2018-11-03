@@ -8,6 +8,8 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
@@ -274,6 +276,69 @@
   <div class="element-circle-white"></div>
   <div class="element-circle-red"></div>
   <div class="element-circle-blue"></div>
+
+
+  <form class="" action="index.html" method="post">
+    <fieldset>
+      <legend>Personal data</legend>
+      <div class="fieldKeeper">
+        <label for="input_name">Your name</label>
+        <input id="input_name" type="text" name="name" value="">
+      </div>
+      <div class="fieldKeeper">
+        <label for="input_surname">Your surname</label>
+        <input id="input_surname" type="text" name="name" value="">
+      </div>
+      <div class="fieldKeeper">
+        <label for="input_address">Address</label>
+        <input id="input_address" type="text" name="name" value="">
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>Login data</legend>
+      <div class="fieldKeeper">
+        <label for="input_login">Login</label>
+        <div class="inputKeeper">
+          <input id="input_login" type="text" name="name" value="" placeholder="Your login">
+        </div>
+      </div>
+      <div class="fieldKeeper">
+        <label for="input_password">Password</label>
+        <div class="inputKeeper">
+          <input id="input_password" type="password" name="password" value="" placeholder="Password">
+        </div>
+      </div>
+      <div class="fieldKeeper">
+        <label for="input_password_confirm">Confirm password</label>
+        <div class="inputKeeper">
+          <input id="input_password_confirm" type="password" name="confirm_password" value="" placeholder="Confirmed password">
+        </div>
+      </div>
+    </fieldset>
+    <div style="display: block">
+      <div class="fieldKeeper">
+        <textarea placeholder="Here describe your skills"></textarea>
+      </div>
+      <div class="fieldKeeper">
+        <div class="selectWrapper">
+          <select>
+            <option>Please choose one option...</option>
+            <option>Option one</option>
+            <option>Option two</option>
+            <option>Option three</option>
+            <option>Option four</option>
+            <option>Option five</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </form>
+  <br> <br> <br> <br>
+  <div class="">
+    <div class="center-container">
+      <div class="center-element">Centered</div>
+    </div>
+  </div>
 
 </body>
 

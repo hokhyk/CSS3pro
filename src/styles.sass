@@ -419,3 +419,76 @@ body
         image: url(assets/images/nina-dobrev.png)
         repeat: no-repeat
         size: 50% 50%
+
+@import "~@angular/material/prebuilt-themes/indigo-pink.css"
+
+.fieldKeeper
+    position: relative
+fieldset
+    width: auto
+    border: 2px solid green
+legend
+    text-transform: uppercase
+    font:
+    size: 10px
+    weight: bold
+label
+    position: absolute
+    width: 200px
+    display: inline-block
+    left: 0
+    font:
+    size: 12px
+.inputKeeper
+    padding:
+        left: 200px
+input
+    width: 100%
+
+textarea
+    width: 300px
+    height: 150px
+    resize: vertical  //none, vertical, horizontal, both
+    border: 2px solid g 
+
+.selectWrapper
+    width: 300px
+    border: 2px solid green
+    overflow: hidden
+    position: relative
+    
+    &:after
+        content: ''
+        position: absolute
+        +triangleBottom(10px, 6px, red)
+        right: 5px
+        margin-top: -3px
+        top: 50%
+select
+    background: #fff
+    color: black
+    font:
+        size: 14px
+    border: none
+    width: 105%
+
+.center-container
+    position: relative
+    opacity: 0.3    
+    background: black
+    height: 400px
+    .center-element
+        opacity: 0.8  
+        position: absolute
+        width: 150px
+        height: 200px
+        background: red
+        left: 50%
+        // right: 50%
+        top: 50%
+        // bottom: 50%
+        -webkit-transform: translate(-50%, -50%)
+        -moz-transform: translate(-50%, -50%)
+        -ms-transform: translate(-50%, -50%)
+        -o-transform: translate(-50%, -50%)
+        transform: translate(-50%, -50%)
