@@ -492,3 +492,136 @@ select
         -ms-transform: translate(-50%, -50%)
         -o-transform: translate(-50%, -50%)
         transform: translate(-50%, -50%)
+
+// .flexContainer
+//     display: -webkit-box
+//     display: -moz-box
+//     display: -ms-flexbox
+//     display: -webkit-flex
+//     display: flex
+
+=displayFlex
+    display: -webkit-box
+    display: -moz-box
+    display: -ms-flexbox
+    display: -webkit-flex
+    display: flex
+
+=flexOrder($number)
+    -webkit-box-ordinal-group: $number
+    -moz-box-ordinal-group: $number
+    -ms-flex-order: $number
+    -webkit-order: $number
+    order: $number
+
+.flexContainer
+    +displayFlex
+    -webkit-flex-flow: row wrap
+    flex-flow: row wrap
+    // align-items: flex-end //stretch, flex-start, flex-end, center, baseline
+    & > *
+        padding: 10px
+        flex: 1 100%
+    header
+        background: red
+    footer
+        background: lightblue
+    main
+        background: yellow
+        flex: 3 1 auto
+    aside
+        background: green
+        flex: 0 0 auto
+        width: 100px
+
+
+.flex-container > *
+    padding: 20px
+.first
+    background: lightblue
+.second
+    background: lightcyan
+    
+@media screen and (max-width: 600px)
+    .flex-container
+        +displayFlex
+        -webkit-flex-flow: row wrap
+        flex-flow: row wrap
+        & > *
+            width: 100%
+        .first
+            +flexOrder(2)
+        .second
+            +flexOrder(1)
+// .blue
+//     background: blue
+// .green
+//     background: green
+// .yellow
+//     background: yellow
+
+// h100px
+//     height: 100px
+// .h200px
+//     height: 200px
+// .h300px
+//     height: 300px
+
+
+.transform-table
+    border-collapse: collapse
+    td, th
+        border: 1px solid black
+    div[class^="transform_"]
+        width: 100px
+        height: 100px
+        background: lightblue
+        line-height: 100px
+        text:
+        align: center
+        transform: uppercase
+        font:
+        weight: bold
+        size: 10px
+        display: inline-block
+    td
+        text-align: center
+        vertical-align: middle
+        width: 150px
+        height: 150px
+    .transform_
+    /* Rotate */
+    &rotate
+    transform: rotate(25deg)
+    &rotatex
+    transform: rotateX(25deg)
+    &rotatey
+    transform: rotateY(25deg)
+    &rotatez
+    transform: rotateZ(25deg)
+    /* Skew */
+    &skew
+    transform: skew(10deg, 10deg)
+    &skewx
+    transform: skewX(10deg)
+    &skewy
+    transform: skewY(10deg)
+    /* Scale */
+    &scalex
+    transform: scaleX(1.2)
+    &scale
+    transform: scale(1.2)
+    &scaley
+    transform: scaleY(1.2)
+    /* Translate */
+    &translate
+    transform: translate(10px, 10px)
+    &translatex
+    transform: translate(10%)
+    &translatey
+    transform: translate(10%)
+    &translatez
+    transform: translate(10%)
+    /* Multiple */
+    &multiple01
+    transform: rotateX(25deg) translate(10px, 10px) skewX(10deg)
