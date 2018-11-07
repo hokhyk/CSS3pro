@@ -369,6 +369,7 @@ body
             bottom: 1px solid darkgreen
 
 .container
+    +clear-fix
     width: 1000px
     height: 500px
     border: 3px solid red
@@ -625,6 +626,25 @@ select
         /* Multiple */
         &multiple01
             transform: rotateX(25deg) translate(10px, 10px) skewX(10deg)
+
+.self-container
+    +clear-fix
+
+.calcdemo
+    .self-container
+        +clear-fix
+        & > *
+            float: left
+            height: 200px
+            padding: 10px
+            box-sizing: border-box
+    .first
+        width: 100px
+        background: red
+    .second
+        width: calc(100% - 100px)   //calc function to tranform percentage to pixels.
+        background: blue    
+
 .gradient_
     &linear_
         &vertical
