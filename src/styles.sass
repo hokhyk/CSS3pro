@@ -590,38 +590,62 @@ select
         width: 150px
         height: 150px
     .transform_
-    /* Rotate */
-    &rotate
-    transform: rotate(25deg)
-    &rotatex
-    transform: rotateX(25deg)
-    &rotatey
-    transform: rotateY(25deg)
-    &rotatez
-    transform: rotateZ(25deg)
-    /* Skew */
-    &skew
-    transform: skew(10deg, 10deg)
-    &skewx
-    transform: skewX(10deg)
-    &skewy
-    transform: skewY(10deg)
-    /* Scale */
-    &scalex
-    transform: scaleX(1.2)
-    &scale
-    transform: scale(1.2)
-    &scaley
-    transform: scaleY(1.2)
-    /* Translate */
-    &translate
-    transform: translate(10px, 10px)
-    &translatex
-    transform: translate(10%)
-    &translatey
-    transform: translate(10%)
-    &translatez
-    transform: translate(10%)
-    /* Multiple */
-    &multiple01
-    transform: rotateX(25deg) translate(10px, 10px) skewX(10deg)
+        /* Rotate */
+        &rotate
+            transform: rotate(25deg)
+        &rotatex
+            transform: rotateX(25deg)
+        &rotatey
+            transform: rotateY(25deg)
+        &rotatez
+            transform: rotateZ(25deg)
+        /* Skew */
+        &skew
+            transform: skew(10deg, 10deg)
+        &skewx
+            transform: skewX(10deg)
+        &skewy
+            transform: skewY(10deg)
+        /* Scale */
+        &scalex
+            transform: scaleX(1.2)
+        &scale
+            transform: scale(1.2)
+        &scaley
+            transform: scaleY(1.2)
+        /* Translate */
+        &translate
+            transform: translate(10px, 10px)
+        &translatex
+            transform: translate(10%)
+        &translatey
+            transform: translate(10%)
+        &translatez
+            transform: translate(10%)
+        /* Multiple */
+        &multiple01
+            transform: rotateX(25deg) translate(10px, 10px) skewX(10deg)
+.gradient_
+    &linear_
+        &vertical
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#000), color-stop(100%, #f00))
+            background: -moz-linear-gradient(top, #000 0%, #f00 100%)
+            background: -webkit-linear-gradient(top, #000 0%, #f00 100%)
+            background: -o-linear-gradient(top, #000 0%, #f00 100%)
+            background: -ms-linear-gradient(top, #000 0%, #f00 100%)
+            background: linear-gradient(to bottom, #000 0%, #f00 100%)
+        &horizontal
+            background: -webkit-gradient(linear, left top, right top, from(#fff), to(#000))
+            background: -webkit-linear-gradient(left, #fff, #000)
+            background: -moz-linear-gradient(left, #fff, #000)
+            background: -ms-linear-gradient(left, #fff, #000)
+            background: -o-linear-gradient(left, #fff, #000)
+            background: linear-gradient(to right, #fff, #000)
+        &multicolor
+            background: linear-gradient(to right, black, red, white)
+        &multicolorconcentration
+            background: linear-gradient(to right, black 40%, red 50%, white 100%)
+        &rotate
+            background: linear-gradient(45deg , black, red, white)
+    
+
