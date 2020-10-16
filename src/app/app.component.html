@@ -1,19 +1,20 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
+<div class="vh-100 vw-100 overflow-hidden">
+  <div style="text-align:center">
+    <h1>
+      Welcome to {{ title }}!
+    </h1>
+  </div>
+  <nav class="row mb-5">
+    <ul class="nav nav-bar">
+      <li class="mx-5"><a [routerLink]="['/former']">Former CSS3 examples</a></li>
+      <li class="mx-5"><a [routerLink]="['/gradient']">Gradient background</a></li>
+      <li class="mx-5"></li>
+      <li class="mx-5"></li>
+    </ul>
+  </nav>
+  <router-outlet></router-outlet>
 </div>
-<nav>
-  <ul>
-    <li><a [routerLink]="['/former']">Former CSS3 examples</a></li>
-    <li><a [routerLink]="['/gradient']">Gradient background</a></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-  </ul>
-</nav>
-<br>
 
-<router-outlet></router-outlet>
+
+

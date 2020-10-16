@@ -1,0 +1,671 @@
+/* You can add global styles to this file, and also import other style files */
+// .element 
+//     background: pink
+//     padding: 10px
+//     margin: 0px
+//     width: 100px
+//     height: 100px
+//     border: solid 10px red
+
+* 
+    box-sizing: border-box
+
+=clear-fix
+    &:after
+        content: ""
+        visibility: hidden
+        display: block
+        height: 0
+        clear: both
+
+.row
+    +clear-fix
+
+.column_1of2
+    background: yellow
+    width: 50%
+    float: left
+
+    &:nth-child(2n)
+        background: blue
+
+.column_1of3
+    background: orange
+    width: (100% / 3)
+    float: left
+
+    &:nth-child(2n)
+        background: green
+
+.column_1of4
+    background: brown
+    width: 25%
+    float: left
+
+    &:nth-child(2n)
+        background: purple
+
+// .main-navigation
+//     ul
+//         +clear-fix /* This will prevent problems of cleared float */
+//         list-style: none
+
+//     li
+//         float: left
+//         width: (100%/4)
+//         &:hover 
+//             background-color:  red
+
+.equalizer
+    display: table
+    background: orange
+
+.equalized
+    display: table-cell
+    width: 200px
+    background: yellow
+
+p 
+    // text-align: center
+    border: solid 1px yellow
+    &:first-letter
+        color: blue
+        font:
+        weight: bold
+        size: 20px
+    &:first-line
+        color: pink
+
+span
+    position: relative
+    top: -10px
+    left: -20px
+    text-align: center
+
+div 
+    border: solid 2px green
+
+.relative
+    width: 200px
+    height: 200px
+    background: orange
+    position: relative
+
+.absolute
+    width: 40px
+    height: 40px
+    background: red
+    position: absolute
+    left: 100px
+    top: 100px
+
+article
+    position: relative
+    padding: 10px
+    right: 220px
+    left: auto
+    height: 220px
+    background: red
+
+    .image
+        position: absolute
+        right: 10px
+        top: 10px
+        background: #000
+        width: 80px
+        height: 80px
+
+    .content
+        position: relative
+        left: 220px
+        width: 80%
+    
+    .header
+        position: relative
+        left: 220px
+    
+    .description
+        position: relative
+        left: 220PX
+
+nav
+    ul
+        list-style: none
+        padding: 0
+
+    ul > li
+        float: left
+        display: inline-block
+        position: relative
+        margin-right: 10px
+        &:hover
+            ul
+                display: block
+                width: 200px
+    ul ul
+        display: none
+        position: absolute
+        left: 10px
+        li
+            display: block
+
+tbody
+    tr:nth-child(2n)
+        background: #d3d3d3
+    tr:hover
+        background: green
+
+.parent
+    span
+        &:first-of-type
+            color: red
+        &:last-of-type
+            color: red
+    strong
+        &:nth-of-type(2)
+            color: pink
+        &:nth-last-of-type(2)
+            color: magenta
+
+.simple_validation
+    padding: 10px
+    width: 400px
+    box-sizing: border-box
+
+    &:valid
+        background: lightgreen
+    &:invalid
+        background: lightcoral
+
+    label
+        display: inline-block
+        &:before
+            content: 'Not '
+
+    input
+        display: block
+        margin: 10px 0
+        width: 100%
+        box-sizing: border-box
+
+        &:valid
+            border: 3px solid green
+        &:invalid
+            border: 3px solid red
+
+        &:focus
+            background: orange
+            color: red
+            border: 3px solid lightblue
+        
+        &[type="checkbox"]
+            display: inline-block
+            width: 20px
+            
+            &:checked
+                & + label
+                    color: red
+                    
+                    &:before
+                        content: 'Is '
+
+
+=rectangle($w, $h, $c)
+    width: $w
+    height: $h
+    background: $c
+
+.rectangle
+    +rectangle(300px, 100px, lightgreen)
+
+.square
+    width: 100px
+    height: 100px
+    background: lightgreen
+
+=circle($size, $color, $radius)
+    width: $size
+    height: $size
+    border-radius: $radius
+    background: $color
+
+.circle
+    +circle(100px, magenta, 30%)
+
+=ring($size, $color, $width)
+    width: $size
+    height: $size
+    border-radius: 50%
+    border: $width solid $color
+    background: none
+
+.ring
+    +ring(100px, gold, 5px)
+
+.triangle-up
+    width: 0
+    height: 0
+    border-left: 10px solid transparent
+    border-right: 10px solid transparent
+    border-bottom: 10px solid black
+.triangle-down
+    width: 0
+    height: 0
+    border-left: 10px solid transparent
+    border-right: 10px solid transparent
+    border-top: 10px solid black
+.triangle-left
+    width: 0
+    height: 0
+    border-top: 10px solid transparent
+    border-bottom: 10px solid transparent
+    border-left: 10px solid black
+.triangle-right
+    width: 0
+    height: 0
+    border-top: 10px solid transparent
+    border-bottom: 10px solid transparent
+    border-right: 10px solid black
+
+=triangleRight($width, $height, $color)
+    width: 0
+    height: 0
+    border-style: solid
+    border-width: $height/2 0 $height/2 $width
+    border-color: transparent transparent transparent $color
+
+=triangleLeft($width, $height, $color)
+    width: 0
+    height: 0
+    border-style: solid
+    border-width: $height/2 $width $height/2 0
+    border-color: transparent $color transparent transparent
+
+=triangleTop($width, $height, $color)
+    width: 0
+    height: 0
+    border-style: solid
+    border-width: 0 $width/2 $height $width/2
+    border-color: transparent transparent $color transparent
+
+=triangleBottom($width, $height, $color)
+    width: 0
+    height: 0
+    border-style: solid
+    border-width: $height $width/2 0 $width/2
+    border-color: $color transparent transparent transparent
+
+.hok-a
+    display: inline-block
+    border: 1px solid #000
+    radius: 5px
+    padding: 10px 40px 10px 10px
+    position: relative
+    text-decoration: none
+    color: #000
+    &:after
+        display: block
+        position: absolute
+        right: 10px
+        top: 50%
+        margin-top: -5px
+        content: ''
+        +triangleRight(10px, 10px, #000)
+    &:hover
+        +triangleLeft(10px, 10px, red)
+
+::-moz-selection,
+::selection
+    background: red
+    color: white
+
+
+
+//Media queries
+@mixin mq($display, $breakpoint)
+    @media #{$display} and #{$breakpoint}
+        @content
+
+$mq_small_only: "(max-width: 640px)"
+$mq_medium_only: "(min-width: 641px) and (max-width: 1024px)"
+$mq_small_and_medium: "(max-width: 1024px)"
+
+body
+    padding: 0
+    margin: 0
+
+.main-navigation
+    ul
+        +clear-fix /* This will prevent problems of cleared float */
+        list-style: none
+        padding: 0
+        background: greenyellow
+        border:
+        bottom: 1px solid darkgreen
+    li
+        float: left
+        display: block
+    a
+        padding: 10px
+        width: 100%
+        display: block
+        background: greenyellow
+        text-decoration: none
+        color: darkgreen
+        &:hover
+            background: darkgreen
+            color: greenyellow
+
++mq("screen", $mq_small_and_medium)
+   .main-navigation
+        ul
+            list-style: none
+            border: none    
+        li
+            float: none
+            width: 100%
+        a
+            border:
+            bottom: 1px solid darkgreen
+
+.container
+    +clear-fix
+    width: 1000px
+    height: 500px
+    border: 3px solid red
+    background:
+        image: url(/assets/images/circle.png), url(/assets/images/circle.png), url(/assets/images/circle.png), url(/assets/images/circle.png), url(/assets/images/circle.png), url(/assets/images/circle.png), url(/assets/images/circle.png), url(/assets/images/circle.png), url(data:image/jpeg;base64, )
+        repeat: no-repeat  //repeat, no-repeat, repeat-x, repeat-y
+        size: 100px 100px  //contain, cover, auto 100%,  100% auto, 30px 50px,
+        position: left top, center top, right top, left center, center center, right center, bottom left, bottom center, bottom right //center, top, botom, left, right, 600px 200px,
+        size: 50px auto, auto auto, auto auto, auto auto, 200px auto, auto auto,auto auto, auto auto, 50px auto
+
+@import '~compass-mixins/lib/compass/css3'
+// @import url(./assets/images/newsprite/*.png)
+// @include all-newsprite-sprites(true)
+
+@import '~compass-mixins/lib/compass/utilities/sprites'
+
+//  $circles: sprite-map("./assets/images/newsprite/*.png", $spacing: 2px, $layout: diagonal)
+// .element-circle-blue
+//     background-image: sprite-url($circles)
+//     background-position: sprite-position($circles, circle-blue)
+//     @include sprite-dimensions($circles, circle-blue)
+// .element-circle-red
+//     background-image: sprite-url($circles)
+//     background-position: sprite-position($circles, circle-red)
+//     @include sprite-dimensions($circles, circle-red)
+// .element-circle-white
+//     background-image: sprite-url($circles)
+//     background-position: sprite-position($circles, circle-white)
+//     @include sprite-dimensions($circles, circle-white)
+// .element-circle-blue,
+// .element-circle-red,
+// .element-circle-white
+//     float: left
+
+// retina display
+.element
+    background:
+        image: url(/assets/images/nina-dobrev.png)
+        repeat: no-repeat
+        size: cover
+    width: 1000px
+    height: 500px
+    border: 3px solid red
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
+    .element
+        background:
+        image: url(/assets/images/nina-dobrev.png)
+        repeat: no-repeat
+        size: 50% 50%
+
+@import "~@angular/material/prebuilt-themes/indigo-pink.css"
+
+.fieldKeeper
+    position: relative
+fieldset
+    width: auto
+    border: 2px solid green
+legend
+    text-transform: uppercase
+    font:
+    size: 10px
+    weight: bold
+label
+    position: absolute
+    width: 200px
+    display: inline-block
+    left: 0
+    font:
+    size: 12px
+.inputKeeper
+    padding:
+        left: 200px
+input
+    width: 100%
+
+textarea
+    width: 300px
+    height: 150px
+    resize: vertical  //none, vertical, horizontal, both
+    border: 2px solid g 
+
+.selectWrapper
+    width: 300px
+    border: 2px solid green
+    overflow: hidden
+    position: relative
+    
+    &:after
+        content: ''
+        position: absolute
+        +triangleBottom(10px, 6px, red)
+        right: 5px
+        margin-top: -3px
+        top: 50%
+select
+    background: #fff
+    color: black
+    font:
+        size: 14px
+    border: none
+    width: 105%
+
+.center-container
+    position: relative
+    opacity: 0.3    
+    background: black
+    height: 400px
+    .center-element
+        opacity: 0.8  
+        position: absolute
+        width: 150px
+        height: 200px
+        background: red
+        left: 50%
+        // right: 50%
+        top: 50%
+        // bottom: 50%
+        -webkit-transform: translate(-50%, -50%)
+        -moz-transform: translate(-50%, -50%)
+        -ms-transform: translate(-50%, -50%)
+        -o-transform: translate(-50%, -50%)
+        transform: translate(-50%, -50%)
+
+// .flexContainer
+//     display: -webkit-box
+//     display: -moz-box
+//     display: -ms-flexbox
+//     display: -webkit-flex
+//     display: flex
+
+=displayFlex
+    display: -webkit-box
+    display: -moz-box
+    display: -ms-flexbox
+    display: -webkit-flex
+    display: flex
+
+=flexOrder($number)
+    -webkit-box-ordinal-group: $number
+    -moz-box-ordinal-group: $number
+    -ms-flex-order: $number
+    -webkit-order: $number
+    order: $number
+
+.flexContainer
+    +displayFlex
+    -webkit-flex-flow: row wrap
+    flex-flow: row wrap
+    // align-items: flex-end //stretch, flex-start, flex-end, center, baseline
+    & > *
+        padding: 10px
+        flex: 1 100%
+    header
+        background: red
+    footer
+        background: lightblue
+    main
+        background: yellow
+        flex: 3 1 auto
+    aside
+        background: green
+        flex: 0 0 auto
+        width: 100px
+
+
+.flex-container > *
+    padding: 20px
+.first
+    background: lightblue
+.second
+    background: lightcyan
+    
+@media screen and (max-width: 600px)
+    .flex-container
+        +displayFlex
+        -webkit-flex-flow: row wrap
+        flex-flow: row wrap
+        & > *
+            width: 100%
+        .first
+            +flexOrder(2)
+        .second
+            +flexOrder(1)
+// .blue
+//     background: blue
+// .green
+//     background: green
+// .yellow
+//     background: yellow
+
+// h100px
+//     height: 100px
+// .h200px
+//     height: 200px
+// .h300px
+//     height: 300px
+
+
+.transform-table
+    border-collapse: collapse
+    td, th
+        border: 1px solid black
+    div[class^="transform_"]
+        width: 100px
+        height: 100px
+        background: lightblue
+        line-height: 100px
+        text:
+        align: center
+        transform: uppercase
+        font:
+        weight: bold
+        size: 10px
+        display: inline-block
+    td
+        text-align: center
+        vertical-align: middle
+        width: 150px
+        height: 150px
+    .transform_
+        /* Rotate */
+        &rotate
+            transform: rotate(25deg)
+        &rotatex
+            transform: rotateX(25deg)
+        &rotatey
+            transform: rotateY(25deg)
+        &rotatez
+            transform: rotateZ(25deg)
+        /* Skew */
+        &skew
+            transform: skew(10deg, 10deg)
+        &skewx
+            transform: skewX(10deg)
+        &skewy
+            transform: skewY(10deg)
+        /* Scale */
+        &scalex
+            transform: scaleX(1.2)
+        &scale
+            transform: scale(1.2)
+        &scaley
+            transform: scaleY(1.2)
+        /* Translate */
+        &translate
+            transform: translate(10px, 10px)
+        &translatex
+            transform: translate(10%)
+        &translatey
+            transform: translate(10%)
+        &translatez
+            transform: translate(10%)
+        /* Multiple */
+        &multiple01
+            transform: rotateX(25deg) translate(10px, 10px) skewX(10deg)
+
+.self-container
+    +clear-fix
+
+.calcdemo
+    .self-container
+        +clear-fix
+        & > *
+            float: left
+            height: 200px
+            padding: 10px
+            box-sizing: border-box
+    .first
+        width: 100px
+        background: red
+    .second
+        width: calc(100% - 100px)   //calc function to tranform percentage to pixels.
+        background: blue    
+
+.gradient_
+    &linear_
+        &vertical
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#000), color-stop(100%, #f00))
+            background: -moz-linear-gradient(top, #000 0%, #f00 100%)
+            background: -webkit-linear-gradient(top, #000 0%, #f00 100%)
+            background: -o-linear-gradient(top, #000 0%, #f00 100%)
+            background: -ms-linear-gradient(top, #000 0%, #f00 100%)
+            background: linear-gradient(to bottom, #000 0%, #f00 100%)
+        &horizontal
+            background: -webkit-gradient(linear, left top, right top, from(#fff), to(#000))
+            background: -webkit-linear-gradient(left, #fff, #000)
+            background: -moz-linear-gradient(left, #fff, #000)
+            background: -ms-linear-gradient(left, #fff, #000)
+            background: -o-linear-gradient(left, #fff, #000)
+            background: linear-gradient(to right, #fff, #000)
+        &multicolor
+            background: linear-gradient(to right, black, red, white)
+        &multicolorconcentration
+            background: linear-gradient(to right, black 40%, red 50%, white 100%)
+        &rotate
+            background: linear-gradient(45deg , black, red, white)
+    
+
