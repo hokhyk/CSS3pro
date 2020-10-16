@@ -4,10 +4,14 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { GradientBackgroundComponent } from './gradient-background/gradient-background.component';
+import { FormerComponent } from './former/former.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    GradientBackgroundComponent,
+    FormerComponent
   ],
   imports: [
     BrowserModule,
