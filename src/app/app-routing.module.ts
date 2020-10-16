@@ -1,3 +1,4 @@
+import { PersonProfileComponent } from './person-profile/person-profile.component';
 import { ImageHoverComponent } from './image-hover/image-hover.component';
 import { AppComponent } from './app.component';
 import { FormerComponent } from './former/former.component';
@@ -24,6 +25,11 @@ const routes: Routes = [
     path: 'imagehover',
     component: ImageHoverComponent,
     data: { title: 'Hover over image to change content' }
+  },
+  {
+    path: 'cityproflie',
+    component: PersonProfileComponent,
+    data: { title: 'Show a city\'s profile' }
   },
 ];
 

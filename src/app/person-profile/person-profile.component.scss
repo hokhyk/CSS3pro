@@ -1,0 +1,71 @@
+@import "~bootstrap/scss/functions";
+@import '~bootstrap/scss/_variables.scss';
+
+.plane-window {
+    position: relative;
+    background-color: darken($dark, 15%);
+    margin: 2rem 0;
+    color: wheat;
+    letter-spacing: .1em;
+
+    border-radius: 100px;
+    overflow: hidden;
+    transform: translateY(0);
+    
+
+    img {
+        width: 100%;
+        vertical-align: middle;
+    }
+
+    .place-intro {
+        position: relative;
+        padding: 2em;
+        height: 450px;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+
+        &:before {
+            position: absolute;
+            top: 0px;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            content: '';
+            width: 0;
+            height: 0;
+            border-top: 100px solid transparent;
+            border-left: 120px solid rgb(185, 54, 54);
+            border-right: 120px solid rgb(34, 58, 196);
+            transform: translateY( -100% );
+
+            transition: all ease-in-out 0.3s;
+        }
+
+        .place-name {
+            text-align: center;
+
+            &:after {
+                content: '';
+                display: block;
+                height: 2px;
+                margin: 1rem 0;
+                background-color: wheat;
+                width: 100%;
+            }
+        }
+    }
+
+    transition: all 0.3s;
+    &:hover {
+        transform: translateY(-20px);
+        color: red;
+
+        .place-intro:before {
+            border-left: transparent;
+            border-right: transparent;
+        }
+    }
+}
