@@ -1,3 +1,4 @@
+import { ImageHoverComponent } from './image-hover/image-hover.component';
 import { AppComponent } from './app.component';
 import { FormerComponent } from './former/former.component';
 import { GradientBackgroundComponent } from './gradient-background/gradient-background.component';
@@ -18,6 +19,11 @@ const routes: Routes = [
     path: 'gradient',
     component: GradientBackgroundComponent,
     data: { title: 'Gradient background' }
+  },
+  {
+    path: 'imagehover',
+    component: ImageHoverComponent,
+    data: { title: 'Hover over image to change content' }
   },
 ];
 
