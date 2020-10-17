@@ -35,5 +35,10 @@
 @import "~bootstrap/scss/carousel";
 @import "~bootstrap/scss/utilities";
 @import "~bootstrap/scss/print";
+
+// @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import '~material-design-icons/iconfont/material-icons.css';
+@import './scss/material-design/custom-material.scss';
+
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

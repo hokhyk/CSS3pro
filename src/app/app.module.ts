@@ -10,6 +10,10 @@ import { ImageHoverComponent } from './image-hover/image-hover.component';
 import { PersonProfileComponent } from './person-profile/person-profile.component';
 import { OverlayCardComponent } from './overlay-card/overlay-card.component';
 import { NewsComponent } from './news/news.component';
+import { FooterComponent } from './footer/footer.component';
+
+// import { MatIconModule } from '@angular/material/icon';
+
 
 @NgModule({
   declarations: [
@@ -19,12 +23,14 @@ import { NewsComponent } from './news/news.component';
     ImageHoverComponent,
     PersonProfileComponent,
     OverlayCardComponent,
-    NewsComponent
+    NewsComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    // MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

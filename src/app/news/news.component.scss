@@ -26,9 +26,11 @@
             }
         
             transition: all 0.3s;
-            &:hover {
-                transform: translateY(-50px);
-            }
+            // @media (hover: hover) {
+                &:hover {
+                    transform: translateY(-50px);
+                }
+            // }
         }
         
         .news-brief { 
@@ -71,10 +73,12 @@
                 font-size: 1rem;
                 color: white;
 
-                &:hover {
+                // @media (hover: hover) {
+                    &:hover {
                     color: wheat;
                     background-color: #aaa;
-                }
+                    }
+                // }
             }
         }
     }

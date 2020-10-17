@@ -1,3 +1,4 @@
+import { FooterComponent } from './footer/footer.component';
 import { NewsComponent } from './news/news.component';
 import { OverlayCardComponent } from './overlay-card/overlay-card.component';
 import { PersonProfileComponent } from './person-profile/person-profile.component';
@@ -42,6 +43,11 @@ const routes: Routes = [
     path: 'news',
     component: NewsComponent,
     data: { title: 'Show a list of news with a photo each' }
+  },
+  {
+    path: 'footer',
+    component: FooterComponent,
+    data: { title: 'Show page footer' }
   },
 ];
 
