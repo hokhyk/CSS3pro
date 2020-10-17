@@ -1,3 +1,4 @@
+import { NewsComponent } from './news/news.component';
 import { OverlayCardComponent } from './overlay-card/overlay-card.component';
 import { PersonProfileComponent } from './person-profile/person-profile.component';
 import { ImageHoverComponent } from './image-hover/image-hover.component';
@@ -36,6 +37,11 @@ const routes: Routes = [
     path: 'overlaycard',
     component: OverlayCardComponent,
     data: { title: 'Show a series of overlaid cards' }
+  },
+  {
+    path: 'news',
+    component: NewsComponent,
+    data: { title: 'Show a list of news with a photo each' }
   },
 ];
 

@@ -9,6 +9,7 @@ import { FormerComponent } from './former/former.component';
 import { ImageHoverComponent } from './image-hover/image-hover.component';
 import { PersonProfileComponent } from './person-profile/person-profile.component';
 import { OverlayCardComponent } from './overlay-card/overlay-card.component';
+import { NewsComponent } from './news/news.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { OverlayCardComponent } from './overlay-card/overlay-card.component';
     FormerComponent,
     ImageHoverComponent,
     PersonProfileComponent,
-    OverlayCardComponent
+    OverlayCardComponent,
+    NewsComponent
   ],
   imports: [
     BrowserModule,
