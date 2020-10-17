@@ -8,6 +8,7 @@ import { GradientBackgroundComponent } from './gradient-background/gradient-back
 import { FormerComponent } from './former/former.component';
 import { ImageHoverComponent } from './image-hover/image-hover.component';
 import { PersonProfileComponent } from './person-profile/person-profile.component';
+import { OverlayCardComponent } from './overlay-card/overlay-card.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { PersonProfileComponent } from './person-profile/person-profile.componen
     GradientBackgroundComponent,
     FormerComponent,
     ImageHoverComponent,
-    PersonProfileComponent
+    PersonProfileComponent,
+    OverlayCardComponent
   ],
   imports: [
     BrowserModule,

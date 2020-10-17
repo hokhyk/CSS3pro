@@ -1,3 +1,4 @@
+import { OverlayCardComponent } from './overlay-card/overlay-card.component';
 import { PersonProfileComponent } from './person-profile/person-profile.component';
 import { ImageHoverComponent } from './image-hover/image-hover.component';
 import { AppComponent } from './app.component';
@@ -30,6 +31,11 @@ const routes: Routes = [
     path: 'cityproflie',
     component: PersonProfileComponent,
     data: { title: 'Show a city\'s profile' }
+  },
+  {
+    path: 'overlaycard',
+    component: OverlayCardComponent,
+    data: { title: 'Show a series of overlaid cards' }
   },
 ];
 
