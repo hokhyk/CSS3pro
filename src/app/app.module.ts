@@ -12,6 +12,7 @@ import { OverlayCardComponent } from './overlay-card/overlay-card.component';
 import { NewsComponent } from './news/news.component';
 import { FooterComponent } from './footer/footer.component';
 import { MainNavComponent } from './main-nav/main-nav.component';
+import { BreadcumbComponent } from './breadcumb/breadcumb.component';
 
 // import { MatIconModule } from '@angular/material/icon';
 
@@ -26,7 +27,8 @@ import { MainNavComponent } from './main-nav/main-nav.component';
     OverlayCardComponent,
     NewsComponent,
     FooterComponent,
-    MainNavComponent
+    MainNavComponent,
+    BreadcumbComponent
   ],
   imports: [
     BrowserModule,

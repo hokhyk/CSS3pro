@@ -1,0 +1,39 @@
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+
+.breadcump-wrap {
+    max-width: 1200px;
+    background-color: $dark;
+    margin: 1rem auto;
+
+    .breadcumb {
+        display: flex;
+        align-items: stretch;
+    
+        .breadcumb-item {
+            list-style: none;
+            margin-right: 2rem;
+            font-size: 1.5rem;
+
+            &> a {
+                text-decoration: none;
+                color: wheat;
+
+                &:before {
+                    content: '>';
+                    margin-right: 1rem;
+                }
+            }
+
+            &:first-child>a {
+                &:before {
+                    content: '';
+                }
+            }
+
+            &> a:hover, &:last-child >a {
+                color: lighten(red, 15%);
+            }
+        }
+    }
+}

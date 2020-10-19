@@ -1,3 +1,4 @@
+import { BreadcumbComponent } from './breadcumb/breadcumb.component';
 import { MainNavComponent } from './main-nav/main-nav.component';
 import { FooterComponent } from './footer/footer.component';
 import { NewsComponent } from './news/news.component';
@@ -54,6 +55,11 @@ const routes: Routes = [
     path: 'mainnav',
     component: MainNavComponent,
     data: { title: 'Show main navigation bar' }
+  },
+  {
+    path: 'breadcumb',
+    component: BreadcumbComponent,
+    data: { title: 'Show breadcumb' }
   },
 ];
 
