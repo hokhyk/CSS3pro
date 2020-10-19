@@ -13,6 +13,7 @@ import { NewsComponent } from './news/news.component';
 import { FooterComponent } from './footer/footer.component';
 import { MainNavComponent } from './main-nav/main-nav.component';
 import { BreadcumbComponent } from './breadcumb/breadcumb.component';
+import { NavTableComponent } from './nav-table/nav-table.component';
 
 // import { MatIconModule } from '@angular/material/icon';
 
@@ -28,7 +29,8 @@ import { BreadcumbComponent } from './breadcumb/breadcumb.component';
     NewsComponent,
     FooterComponent,
     MainNavComponent,
-    BreadcumbComponent
+    BreadcumbComponent,
+    NavTableComponent
   ],
   imports: [
     BrowserModule,

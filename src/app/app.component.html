@@ -4,21 +4,8 @@
       Welcome to {{ title }}!
     </p>
   </div>
-  <div class="container-fluid overflow-hidden">
-    <nav class="row mb-5">
-      <ul class="nav nav-bar">
-        <li class="mx-5"><a [routerLink]="['/former']">Former CSS3 examples</a></li>
-        <li class="mx-5"><a [routerLink]="['/gradient']">Gradient background</a></li>
-        <li class="mx-5"><a [routerLink]="['/imagehover']">Hover Over Image</a></li>
-        <li class="mx-5"><a [routerLink]="['/cityproflie']">Person Profile</a></li>
-        <li class="mx-5"><a [routerLink]="['/overlaycard']">Overlay Card</a></li>
-        <li class="mx-5"><a [routerLink]="['/news']">News List</a></li>
-        <li class="mx-5"><a [routerLink]="['/footer']">Page Footer</a></li>
-        <li class="mx-5"><a [routerLink]="['/mainnav']">Navigation Bar</a></li>
-        <li class="mx-5"><a [routerLink]="['/breadcumb']">Breadcumb</a></li>
-      </ul>
-    </nav>
-  </div>
+  <!-- table.nav-table>th>td*5^tbody>tr*3>td*5 -->
+  <app-nav-table></app-nav-table>
   
   <router-outlet></router-outlet>
 </div>
