@@ -11,6 +11,7 @@ import { PersonProfileComponent } from './person-profile/person-profile.componen
 import { OverlayCardComponent } from './overlay-card/overlay-card.component';
 import { NewsComponent } from './news/news.component';
 import { FooterComponent } from './footer/footer.component';
+import { MainNavComponent } from './main-nav/main-nav.component';
 
 // import { MatIconModule } from '@angular/material/icon';
 
@@ -24,7 +25,8 @@ import { FooterComponent } from './footer/footer.component';
     PersonProfileComponent,
     OverlayCardComponent,
     NewsComponent,
-    FooterComponent
+    FooterComponent,
+    MainNavComponent
   ],
   imports: [
     BrowserModule,

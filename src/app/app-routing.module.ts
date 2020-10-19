@@ -1,3 +1,4 @@
+import { MainNavComponent } from './main-nav/main-nav.component';
 import { FooterComponent } from './footer/footer.component';
 import { NewsComponent } from './news/news.component';
 import { OverlayCardComponent } from './overlay-card/overlay-card.component';
@@ -48,6 +49,11 @@ const routes: Routes = [
     path: 'footer',
     component: FooterComponent,
     data: { title: 'Show page footer' }
+  },
+  {
+    path: 'mainnav',
+    component: MainNavComponent,
+    data: { title: 'Show main navigation bar' }
   },
 ];
 

@@ -1,0 +1,86 @@
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+
+.header {
+    background-color: lighten($dark, 5%);
+
+    .head-container {
+        background-color: darken($dark, 5%);
+        max-width: 1200px;
+        margin: auto;
+        display: flex;
+        align-items: stretch;
+
+
+        .logo {
+            width: 3rem;    
+            height: 3rem;
+
+            img {
+                width: 100%;
+                height: 100%;
+                vertical-align: middle;
+            }
+        }
+
+        .main-nav {
+            margin: 0 auto;
+            display: flex;
+            align-items: stretch;
+            position: relative;
+
+            .menu-level1 {
+                position: relative;
+                margin: 0 1rem;
+                color: wheat;
+                text-decoration: none;
+                font-size: 1.3rem;
+
+                &:hover {
+                    background-color: lighten($dark, 15%);
+                    &+ .sub-menu {
+                        display: block;
+                    }
+                }
+            
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+            .sub-menu {
+                display: none;
+                position: absolute;
+                top: 48px;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: $dark;
+                
+
+                .sub-menu-item {
+                color: wheat;
+                text-decoration: none;
+                list-style: none;
+                font-size: 1.3rem;
+                margin: 0 1rem;
+
+                &:hover {
+                    background-color: lighten($dark, 15%);
+                }
+                }
+            }
+        }
+
+        .search-bar {
+            input {
+
+            }
+            button {
+                span {
+
+                }
+            }
+        }
+
+    }
+}
