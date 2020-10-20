@@ -14,6 +14,7 @@ import { FooterComponent } from './footer/footer.component';
 import { MainNavComponent } from './main-nav/main-nav.component';
 import { BreadcumbComponent } from './breadcumb/breadcumb.component';
 import { NavTableComponent } from './nav-table/nav-table.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
 
 // import { MatIconModule } from '@angular/material/icon';
 
@@ -30,7 +31,8 @@ import { NavTableComponent } from './nav-table/nav-table.component';
     FooterComponent,
     MainNavComponent,
     BreadcumbComponent,
-    NavTableComponent
+    NavTableComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,

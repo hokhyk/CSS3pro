@@ -1,3 +1,4 @@
+import { SidebarComponent } from './sidebar/sidebar.component';
 import { BreadcumbComponent } from './breadcumb/breadcumb.component';
 import { MainNavComponent } from './main-nav/main-nav.component';
 import { FooterComponent } from './footer/footer.component';
@@ -60,6 +61,11 @@ const routes: Routes = [
     path: 'breadcumb',
     component: BreadcumbComponent,
     data: { title: 'Show breadcumb' }
+  },
+  {
+    path: 'sidebar',
+    component: SidebarComponent,
+    data: { title: 'Show sidebar' }
   },
 ];
 

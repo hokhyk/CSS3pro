@@ -1,0 +1,135 @@
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+
+.sidebar-toggle {
+    // display: none;
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+    &:checked + .sidebar-container{
+        transform: translate(0);
+        .sidebar-toggle-label .material-icons{
+            transform: scaleX(-1);
+        }
+    }
+}
+
+.sidebar-container {
+    position: relative;
+    transform: translate(-100%);
+    transition: 0.3s;
+
+    background-color: lighten( $dark, 10%);
+    max-width: 300px;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    box-shadow: 10px 5px 10px $dark;
+
+    .sidebar-toggle-label {
+        border: 1px solid $dark;
+        background: $dark;
+        border-radius: 0 10px 10px 0;
+        width: 40px;
+        height: 80px;
+        text-align: center;
+
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: -40px;
+        margin: auto;
+
+        .material-icons {
+            line-height: 80px;
+            color: red;
+            font-size: 2.5rem;
+        }
+    }
+
+    .search-bar {
+        margin: 2rem 1rem 1rem;
+
+        .search-form {
+            display: flex;
+            
+            input, button {
+                border: none;
+                outline-style: none;
+            }
+
+            input{
+                flex-grow: 1;
+                border-radius: 50px 0 0 50px;
+                color: red;
+            }
+
+            button{
+                flex-grow: 0;
+                border-radius: 0 50px 50px 0;
+
+                .material-icons {
+                    color: red;
+                }
+            }
+        }
+    }
+
+    .sidebar {
+        ul {
+            position: relative;
+            padding-inline-start: 0px;
+            margin: 0 1rem;
+            li {
+                list-style: none;
+
+                a {
+                    display: block;
+                    color: wheat;
+                    font-size: 1.3rem;
+                    text-decoration: none;
+                    padding: 0.5rem 0;
+
+                }
+
+                &:after {
+                    content: '';
+                    display: block;
+                    height: 2px;
+                    background-color: wheat;
+                    
+                    position: absolute;
+                    left: 50%;
+                    right: 50%;
+                    opacity: 0;
+                    transition: all 0.5s;
+                }
+
+                &:hover:after {
+                    left: 0%;
+                    right: 0%;
+                    opacity: 1;
+                }
+            }
+        }
+
+        .menu-level1 {
+
+        }
+
+        .sub-menu {
+            position: absolute;
+            top: 0;
+            left: 100%;
+
+
+            .sub-menu-item {
+
+            }
+        }
+    }
+
+}
